@@ -3,14 +3,20 @@ class User {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+
+  fullName(){
+    return `${this.firstName} ${this.lastName}`
+  }
 }
 
-let userCollection = [];
+const userCollection = [];
 
-userCollection.push(new User());
-userCollection.push(new User());
-userCollection.push(new User());
-userCollection.push(new User());
-userCollection.push(new User());
+userCollection.push(new User('Pana', 'Panamana'));
+userCollection.push(new User('John', 'Doe'));
+userCollection.push(new User('Hage', 'Manto'));
+userCollection.push(new User('Rukia', 'Kuchiki'));
+userCollection.push(new User('Joe', 'Black'));
 
-console.dir(userCollection);
+console.log(userCollection);
+
+userCollection.forEach(user => console.log(user.fullName()));
