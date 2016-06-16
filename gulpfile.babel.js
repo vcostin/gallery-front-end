@@ -20,7 +20,7 @@ gulp.task('sass', () => {
 gulp.task('js', () => {
   gulp.src('src/javascript/main.js')
     .pipe(rollup({
-      plugins: [babel()],
+      // plugins: [babel()],
       sourceMap: true
     }))
     .pipe(babel())
