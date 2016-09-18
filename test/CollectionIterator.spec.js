@@ -1,4 +1,4 @@
-import {CollectionIterator} from '../src/javascript/CollectionIterator'
+import {CollectionIterator} from '../src/javascript/libraries/CollectionIterator'
 import {assert, expect, should} from 'chai';
 
 describe('CollectionIterator', () => {

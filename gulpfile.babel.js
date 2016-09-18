@@ -5,6 +5,7 @@ import concat from 'gulp-concat';
 import babel from 'gulp-babel';
 import sourcemaps from 'gulp-sourcemaps';
 import rollup from 'gulp-rollup';
+import includePaths from 'rollup-plugin-includepaths';
 
 gulp.task('sass', () => {
   gulp.src('src/styles/**/*.sass')
@@ -18,10 +19,21 @@ gulp.task('sass', () => {
 });
 
 gulp.task('js', () => {
-  gulp.src('src/javascript/main.js')
+  gulp.src('src/javascript/application.js')
     .pipe(rollup({
-      // plugins: [babel()],
-      sourceMap: true
+      format: 'iife',
+      external: ['angular'],
+      plugins: [
+        includePaths({
+          include: {
+            'angular': './node_modules/angular/angular.js'
+          }
+        })
+      ],
+      sourceMap: true,
+      globals: {
+        angular: 'angular'
+      }
     }))
     .pipe(babel())
     .pipe(concat('app.js'))

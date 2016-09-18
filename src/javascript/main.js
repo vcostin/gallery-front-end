@@ -1,15 +1,5 @@
-import {CollectionIterator} from '../javascript/CollectionIterator'
-
-class User {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-
-  fullName() {
-    return `${this.firstName} ${this.lastName}`
-  }
-}
+import {CollectionIterator} from './libraries/CollectionIterator'
+import {User} from './libraries/User'
 
 const userCollection = [];
 

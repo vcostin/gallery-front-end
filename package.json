@@ -21,6 +21,7 @@
   "author": "Vadim Costin",
   "license": "MIT",
   "devDependencies": {
+    "angular": "^1.5.7",
     "babel": "^6.5.2",
     "babel-core": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",
@@ -33,6 +34,7 @@
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "rollup-plugin-includepaths": "^0.1.5"
   }
 }
